@@ -1,9 +1,9 @@
 const siteMeta = {
-	title: "Astro Theme Cactus",
-	description: "An opinionated starter theme for Astro",
-	lang: "en-GB",
-	ogLocale: "en_GB",
-	githubUrl: "https://github.com/chrismwilliams/astro-theme-cactus",
+	title: "Watermelon Rat",
+	description: "A fruity rat's blogging",
+	lang: "en-US",
+	ogLocale: "en_US",
+	githubUrl: "https://github.com/AsbestosPC/watermelonrat",
 	themeColorLight: "#fafafa",
 	themeColorDark: "#1d1f21",
 };
