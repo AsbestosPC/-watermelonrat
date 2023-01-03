@@ -40,7 +40,7 @@ const menuLinks = [
 	<div class="flex sm:flex-col">
 		<a
 			href="/"
-			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			class="inline-flex items-center sm:relative sm:inline-block"
 			aria-current={url.pathname === "/" ? "page" : false}
 		>
 			<Image
@@ -55,7 +55,7 @@ const menuLinks = [
 				width={200}
 				height={200}
 			/>
-			<span class="text-xl font-bold sm:text-2xl">Watermelon Rat</span>
+			<span class="blog-title-first text-3xl font-bold sm:text-4xl">Watermelon <span class="blog-title-second">Rat</span></span>
 		</a>
 		<nav
 			id="navigation-menu"
@@ -66,7 +66,7 @@ const menuLinks = [
 				menuLinks.map((link) => (
 					<a
 						href={link.path}
-						class="py-4 px-4 sm:py-0 sm:hover:underline"
+						class="py-1 px-4 sm:py-0 sm:hover:underline"
 						aria-current={url.pathname === link.path ? "page" : false}
 						rel="prefetch"
 					>
@@ -79,7 +79,7 @@ const menuLinks = [
 	<ThemeToggle />
 	<button
 		id="toggle-navigation-menu"
-		class="group relative ml-8 h-7 w-7 sm:invisible sm:hidden"
+		class="group relative ml-3 h-7 w-7 sm:invisible sm:hidden"
 		type="button"
 		aria-label="Open main menu"
 		aria-expanded="false"

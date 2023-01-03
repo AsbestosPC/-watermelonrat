@@ -13,7 +13,7 @@ const datetime = date.toISOString();
 const postDate = getFormattedDate(date);
 ---
 
-<h1 class="title">{content.title}</h1>
+<h1 class="title text-4xl">{content.title}</h1>
 <span
 	class="flex flex-col sm:gap-y-2 md:flex-row md:items-center md:gap-y-0 md:divide-x md:divide-textColor"
 >
@@ -41,7 +41,7 @@ const postDate = getFormattedDate(date);
 					{content.tags.map((tag) => (
 						<li>
 							<a
-								class="cactus-link inline-block"
+								class="cactus-link inline-block text-base"
 								aria-label={`View more blogs with the tag ${tag}`}
 								href={`/tags/${tag}`}
 							>

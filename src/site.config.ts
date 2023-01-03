@@ -1,6 +1,6 @@
 const siteMeta = {
 	title: "Watermelon Rat",
-	description: "A fruity rat's blogging",
+	description: "A fruity rat's thought journal",
 	lang: "en-US",
 	ogLocale: "en_US",
 	githubUrl: "https://github.com/AsbestosPC/watermelonrat",

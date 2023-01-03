@@ -1,4 +1,5 @@
 @tailwind base;
+
 @layer base {
 	:root {
 		color-scheme: light;
@@ -14,12 +15,20 @@
 	:root.dark {
 		color-scheme: dark;
 		--theme-bg: #1d1f21;
-		--theme-link: #d480aa;
+		--theme-link: #800020;
 		--theme-text: #c9cacc;
-		--theme-accent: #2bbc89;
+		--theme-accent: #00FA9A;
 		--theme-accent-2: #eee;
 		--theme-quote: #ccffb6;
 		--theme-menu-bg: rgb(29 31 33 / 0.85);
+	}
+
+	.blog-title-first {
+		color: #00A877;
+	}
+
+	.blog-title-second {
+		color: #C40233;
 	}
 
 	html {
@@ -27,8 +36,9 @@
 	}
 
 	html body {
-		@apply mx-auto flex h-full max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
+		@apply mx-auto flex h-full max-w-3xl flex-col bg-bgColor px-8 pt-16 font-crimson-pro text-xl font-normal text-textColor antialiased;
 	}
 }
+
 @tailwind components;
 @tailwind utilities;

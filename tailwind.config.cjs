@@ -30,6 +30,7 @@ module.exports = {
 				// Add any custom fonts here
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
+				'crimson-pro': ['"Crimson Pro"', 'cursive']
 			},
 			transitionProperty: {
 				height: "height",

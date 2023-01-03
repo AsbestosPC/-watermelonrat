@@ -14,14 +14,14 @@ const { frontmatter, headings } = Astro.props;
 		<article>
 			<BlogHero content={frontmatter} />
 			<div
-				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+				class="prose prose-lg prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
 			>
 				<slot />
 			</div>
 		</article>
 		<aside class="hidden text-right sm:sticky sm:top-20 sm:block">
 			<h2 class="font-semibold">Table of Contents</h2>
-			<ul class="mt-4 space-y-2 text-xs">
+			<ul class="mt-4 space-y-2 text-s">
 				{
 					headings.map(({ slug, text }) => (
 						<li class="line-clamp-2 hover:text-accent">
