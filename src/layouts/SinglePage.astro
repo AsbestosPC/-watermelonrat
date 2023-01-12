@@ -1,0 +1,23 @@
+---
+import BaseLayout from "./Base.astro";
+import BlogHero from "@/components/blog/SinglePageHero";
+import type { Post } from "@/data/posts";
+import type { MDXLayoutProps } from "@/data/shared";
+
+type Props = MDXLayoutProps<Post>;
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout meta={{ title: frontmatter.title, description: frontmatter.description }}>
+	<div>
+		<article>
+			<BlogHero content={frontmatter} />
+			<div
+				class="prose text-lg prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+			>
+				<slot />
+			</div>
+		</article>
+	</div>
+</BaseLayout>
