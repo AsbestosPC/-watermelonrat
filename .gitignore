@@ -22,3 +22,6 @@ pnpm-debug.log*
 # misc
 *.pem
 .cache
+
+# blog posts
+src/pages/posts
