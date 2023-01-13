@@ -7,7 +7,8 @@ import type { Page, MDXInstance, GetStaticPaths } from "@/data/shared";
 import type { Post } from "@/data/posts";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-	const allPosts = await Astro.glob<Post>("./*.mdx");
+	const unfilteredPosts = await Astro.glob<Post>("./*.mdx");
+	const allPosts = unfilteredPosts.filter((post) => !post.frontmatter.draft);
 	const allPostsByDate = sortMDByDate(allPosts);
 	const uniqueTags = getUniqueTags(allPosts);
 	return paginate(allPostsByDate, { props: { uniqueTags }, pageSize: 10 });

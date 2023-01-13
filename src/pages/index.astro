@@ -1,22 +1,22 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
-import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
 import type { Post } from "@/data/posts";
 
 const MAX_POSTS = 10;
-const allPosts = await Astro.glob<Post>("./posts/*.mdx");
+const unfilteredPosts = await Astro.glob<Post>("./posts/*.mdx");
+const allPosts = unfilteredPosts.filter((post) => !post.frontmatter.draft);
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6 text-3xl">Hello World!</h1>
+		<h1 class="title mb-6 text-3xl">Hello Folks~</h1>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, an example of how you can use this starter to create a personal
-			blog. If you want to know more about how you can customise me, add more posts, and make it
-			your own, click on one of the social links which will take you to my repo.
+			Welcome to the personal blog of a fruity rat by the name of Jaylo.
+			This is my corner of the Internet to share my musings and save my Discord friends from my ramblings.
+			I won't tell you to enjoy your stay, but I do hope you find something 
 		</p>
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
